@@ -5,7 +5,8 @@ $(document).ready(function()
     
 });
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => 
+{
     const inputField = document.getElementById("input");
     inputField.addEventListener("keydown", (e) => {
       if (e.code === "Enter") {
@@ -14,9 +15,21 @@ document.addEventListener("DOMContentLoaded", () => {
         output(input);
       }
     });
-  });
+});
+
+document.getElementById("testbutton").addEventListener("click", function() 
+{
+    console.log("button click");
+    const inputField = document.getElementById("input");
+    let input = inputField.value;
+    inputField.value = "";
+    output(input);
+      
+});
+
   
-  function output(input) {
+function output(input) 
+{
     let product;
   
     // Regex remove non word/space chars
@@ -48,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
     // Update DOM
     addChat(input, product);
-  }
+}
   
   function compare(promptsArray, repliesArray, string) {
     let reply;
