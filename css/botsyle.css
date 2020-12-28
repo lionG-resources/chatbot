@@ -78,26 +78,39 @@ input {
     height: 25px;
 }
   
-  .response {
-      display: flex;
-      align-items: center;
-      margin: 1%;
-  }
+.response {
+    display: flex;
+    align-items: center;
+    margin: 1%;
+}
   
   
   /* Mobile */
   
-  @media only screen and (max-width: 980px) {
-    .container {
-          flex-direction: column; 
-          justify-content: flex-start;
-      }
-      .chat {
-          width: 75vw;
-          margin: 10vw;
-      }
-  }
+@media only screen and (max-width: 980px) {
+.container {
+        flex-direction: column; 
+        justify-content: flex-start;
+    }
+    .chat {
+        width: 75vw;
+        margin: 10vw;
+    }
+}
 
-  @media all and (max-width: 480px) {
+@media all and (max-width: 480px) 
+{
     .botImage { display: none; }
-  }
+}
+
+/*
+@media screen and (min-width: 0px) and (max-width: 400px) 
+{
+    #testbutton{ display: block; }  // show it on smaller screen 
+}
+@media screen and (min-width: 401px) and (max-width: 1024px) 
+{
+    #testbutton{ display: none; }   // hide it on larger screens 
+}
+
+*/

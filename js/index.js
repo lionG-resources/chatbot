@@ -1,7 +1,18 @@
 
 $(document).ready(function() 
 { 
-   
+    $(window).resize(function() 
+    {
+        // This will fire each time the window is resized:
+        if($(window).width() >= 991) // if larger or equal
+        {   
+            $("#testbutton").hide();
+        } 
+        else // if smaller
+        {   
+            $("#testbutton").show();
+        }
+    }).resize();
     
 });
 
@@ -22,8 +33,12 @@ document.getElementById("testbutton").addEventListener("click", function()
     console.log("button click");
     const inputField = document.getElementById("input");
     let input = inputField.value;
-    inputField.value = "";
-    output(input);
+    if(input.length>0)
+    {
+        inputField.value = "";
+        output(input);
+    }
+    
       
 });
 
